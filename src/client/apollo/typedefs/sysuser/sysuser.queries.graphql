@@ -1,0 +1,11 @@
+query GetSysUserById($id: ID!) {
+  getSysUserById(id: $id) {
+    ...SysUserFragment
+  }
+}
+
+query GetAllSysUsers {
+  getAllSysUsers {
+    ...SysUserBaseFragment
+  }
+}

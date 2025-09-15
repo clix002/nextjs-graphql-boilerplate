@@ -1,0 +1,11 @@
+input CreateSysUserInput {
+  firstName: String!
+  lastName: String
+  email: String!
+}
+
+input UpdateSysUserInput {
+  firstName: String
+  lastName: String
+  email: String
+}

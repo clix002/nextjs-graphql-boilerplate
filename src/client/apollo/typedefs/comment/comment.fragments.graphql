@@ -1,0 +1,4 @@
+fragment CommentFragment on Comment {
+  id
+  content
+}

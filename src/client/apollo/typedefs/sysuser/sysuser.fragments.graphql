@@ -1,0 +1,16 @@
+fragment SysUserBaseFragment on SysUser {
+  id
+  firstName
+  lastName
+  email
+}
+
+fragment SysUserFragment on SysUser {
+  id
+  firstName
+  lastName
+  email
+  comments {
+    ...CommentFragment
+  }
+}

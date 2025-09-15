@@ -1,0 +1,17 @@
+mutation CreateSysUser($input: CreateSysUserInput!) {
+  createSysUser(input: $input) {
+    ...SysUserBaseFragment
+  }
+}
+
+mutation UpdateSysUserById($id: String!, $input: UpdateSysUserInput!) {
+  updateSysUserById(id: $id, input: $input) {
+    ...SysUserBaseFragment
+  }
+}
+
+mutation DeleteSysUserById($id: String!) {
+  deleteSysUserById(id: $id) {
+    ...SysUserBaseFragment
+  }
+}

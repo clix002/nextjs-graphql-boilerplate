@@ -1,0 +1,13 @@
+model SysUser {
+  id            String      @id @default(nanoid())
+  firstName     String      @map("nombres")
+  lastName      String?     @map("apellidos")
+  email         String      @unique @map("correo_electronico")
+  createdAt     DateTime    @default(now()) @map("fecha_creacion")
+  updatedAt     DateTime    @updatedAt @map("fecha_actualizacion")
+
+  // Relaciones
+  comments      Comment[]   @relation("CommentAuthor")
+
+  @@map("usuarios")
+}

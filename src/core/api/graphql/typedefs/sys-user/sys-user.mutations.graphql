@@ -1,0 +1,5 @@
+type Mutation {
+  createSysUser(input: CreateSysUserInput!): SysUser!
+  updateSysUserById(id: String!, input: UpdateSysUserInput!): SysUser!
+  deleteSysUserById(id: String!): SysUser!
+}

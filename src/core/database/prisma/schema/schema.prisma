@@ -1,0 +1,12 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Configurar directorio de migraciones
+// Las migraciones se generarán en: src/core/database/prisma/migrations

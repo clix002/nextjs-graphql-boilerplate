@@ -1,0 +1,5 @@
+type Query {
+  getSysUserById(id: ID!): SysUser
+  getAllSysUsers: [SysUser!]!
+  getSysUsersPaginated(options: OptionsInput!): SysUsersPaginatedResponse
+}
