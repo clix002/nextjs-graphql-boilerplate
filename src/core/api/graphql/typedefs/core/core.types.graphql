@@ -1,0 +1,30 @@
+scalar Date
+scalar JSON
+
+input QueryInput {
+  search: String
+  filters: JSON
+}
+
+input OptionsInput {
+  limit: Int
+  page: Int
+  sort: JSON
+}
+
+type Pagination {
+  totalDocs: Int!
+  limit: Int!
+  hasPrevPage: Boolean!
+  hasNextPage: Boolean!
+  totalPages: Int!
+  page: Int
+  prevPage: Int
+  nextPage: Int
+}
+
+type Response {
+  success: Boolean!
+  message: String!
+  data: JSON
+}

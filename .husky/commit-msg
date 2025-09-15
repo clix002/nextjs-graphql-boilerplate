@@ -1,0 +1,15 @@
+#!/bin/sh
+# Validar formato de mensaje de commit
+# Formato: <tipo>: <descripción>
+
+commit_regex='^(feat|fix|docs|style|refactor|test|chore): .+'
+
+if ! echo "$1" | grep -qE "$commit_regex"; then
+    echo "❌ Formato de commit inválido!"
+    echo "✅ Formato correcto: <tipo>: <descripción>"
+    echo "📋 Tipos válidos: feat, fix, docs, style, refactor, test, chore"
+    echo "💡 Ejemplo: feat: add user authentication"
+    exit 1
+fi
+
+echo "✅ Formato de commit válido"

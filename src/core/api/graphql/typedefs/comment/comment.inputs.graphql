@@ -1,0 +1,8 @@
+input CreateCommentInput {
+  content: String
+  authorId: String
+}
+
+input UpdateCommentInput {
+  content: String
+}

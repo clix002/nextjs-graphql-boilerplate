@@ -1,0 +1,13 @@
+model Comment {
+  id        String   @id @default(nanoid())
+  content   String   @map("contenido")
+  createdAt DateTime @default(now()) @map("fecha_creacion")
+  updatedAt DateTime @updatedAt @map("fecha_actualizacion")
+  
+  // Relaciones
+  authorId  String   @map("autor_id")
+  author    SysUser  @relation("CommentAuthor", fields: [authorId], references: [id])
+  
+  @@map("comentarios")
+}
+

@@ -1,0 +1,4 @@
+type Query {
+  getCommentById(id: ID!): Comment
+  getAllComments: [Comment!]!
+}

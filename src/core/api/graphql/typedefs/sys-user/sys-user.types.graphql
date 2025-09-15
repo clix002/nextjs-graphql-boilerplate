@@ -1,0 +1,14 @@
+type SysUser {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String
+
+  #relations
+  comments: [Comment!]
+}
+
+type SysUsersPaginatedResponse {
+  docs: [SysUser!]!
+  info: Pagination!
+}

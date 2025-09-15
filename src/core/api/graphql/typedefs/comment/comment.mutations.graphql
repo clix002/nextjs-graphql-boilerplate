@@ -1,0 +1,5 @@
+type Mutation {
+  createComment(input: CreateCommentInput!): Comment!
+  updateComment(id: ID!, input: UpdateCommentInput!): Comment!
+  deleteComment(id: ID!): Comment!
+}
